@@ -1,0 +1,16 @@
+PODS:
+  - PollJoy (0.1.0)
+
+DEPENDENCIES:
+  - PollJoy (from `../`)
+
+EXTERNAL SOURCES:
+  PollJoy:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  PollJoy: 99024b8de5909be0bb74fb041c5148a2b1b5a419
+
+PODFILE CHECKSUM: 7eb65a7f6121ca8402754cbefeb74b0acb260e69
+
+COCOAPODS: 1.10.1

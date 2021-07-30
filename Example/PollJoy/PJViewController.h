@@ -7,7 +7,8 @@
 //
 
 @import UIKit;
+#import <PollJoy/Polljoy.h>
 
-@interface PJViewController : UIViewController
+@interface PJViewController : UIViewController<PolljoyDelegate>
 
 @end

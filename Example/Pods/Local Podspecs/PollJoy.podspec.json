@@ -1,0 +1,22 @@
+{
+  "name": "PollJoy",
+  "version": "0.1.0",
+  "summary": "A short description of PollJoy.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Bartjezzz/PollJoy",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Bartjezzz": "bart@bluegiraffe.nl"
+  },
+  "source": {
+    "git": "https://github.com/Bartjezzz/PollJoy.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "PollJoy/Classes/**/*"
+}

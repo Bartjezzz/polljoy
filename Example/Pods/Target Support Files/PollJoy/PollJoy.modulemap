@@ -1,0 +1,6 @@
+framework module PollJoy {
+  umbrella header "PollJoy-umbrella.h"
+
+  export *
+  module * { export * }
+}

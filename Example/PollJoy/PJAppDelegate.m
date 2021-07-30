@@ -5,6 +5,8 @@
 //  Created by Bartjezzz on 07/30/2021.
 //  Copyright (c) 2021 Bartjezzz. All rights reserved.
 //
+//#import <PollJoy-umbrella.h>
+#import <PollJoy/PollJoy.h>
 
 #import "PJAppDelegate.h"
 
@@ -13,6 +15,14 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+	
+	// PollJoy
+	// Before testing, please make sure you update your ID. Check
+	// https://admin.polljoy.com/integrate
+	// for details.
+	
+	[Polljoy startSession:@"FILL_IN_VALID_ID"];
+	
     return YES;
 }
 

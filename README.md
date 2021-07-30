@@ -15,6 +15,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 PollJoy is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
+Make sure you setup your PollJoy account before using the SDK
 
 ```ruby
 pod 'PollJoy'
@@ -22,7 +23,7 @@ pod 'PollJoy'
 
 ## Author
 
-Bartjezzz, bart@bluegiraffe.nl
+Bart van  den Berg, bart@gamehouse.com
 
 ## License
 

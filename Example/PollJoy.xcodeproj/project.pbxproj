@@ -57,16 +57,16 @@
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
-		627C89C5565C1AB36DC23554 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		627C89C5565C1AB36DC23554 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		694E99D0793EB4413D9E0D9D /* Pods-PollJoy_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PollJoy_Tests.debug.xcconfig"; path = "Target Support Files/Pods-PollJoy_Tests/Pods-PollJoy_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		816F17E8427AE9B690150C46 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		816F17E8427AE9B690150C46 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9E27E0B545FF9EEEDE8F7890 /* Pods_PollJoy_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PollJoy_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE1D67F3C4FCF83CD921A21A /* Pods_PollJoy_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PollJoy_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF0EC0816C2A66F29D571ADC /* Pods-PollJoy_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PollJoy_Example.debug.xcconfig"; path = "Target Support Files/Pods-PollJoy_Example/Pods-PollJoy_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		EDE61D3E095CDC8D0229A989 /* Pods-PollJoy_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PollJoy_Example.release.xcconfig"; path = "Target Support Files/Pods-PollJoy_Example/Pods-PollJoy_Example.release.xcconfig"; sourceTree = "<group>"; };
-		F98B5F7E6A31097E73ED981C /* PollJoy.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = PollJoy.podspec; path = ../PollJoy.podspec; sourceTree = "<group>"; };
+		F98B5F7E6A31097E73ED981C /* PollJoy.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = PollJoy.podspec; path = ../PollJoy.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,7 +193,6 @@
 				694E99D0793EB4413D9E0D9D /* Pods-PollJoy_Tests.debug.xcconfig */,
 				495D8907FA3D43217A21E7D8 /* Pods-PollJoy_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -248,6 +247,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = Bartjezzz;
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = DF4L8M697H;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -258,6 +260,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -494,10 +497,17 @@
 			baseConfigurationReference = DF0EC0816C2A66F29D571ADC /* Pods-PollJoy_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = DF4L8M697H;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PollJoy/PollJoy-Prefix.pch";
 				INFOPLIST_FILE = "PollJoy/PollJoy-Info.plist";
 				MODULE_NAME = ExampleApp;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"PollJoy\"",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -510,10 +520,17 @@
 			baseConfigurationReference = EDE61D3E095CDC8D0229A989 /* Pods-PollJoy_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = DF4L8M697H;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PollJoy/PollJoy-Prefix.pch";
 				INFOPLIST_FILE = "PollJoy/PollJoy-Info.plist";
 				MODULE_NAME = ExampleApp;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"PollJoy\"",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
