@@ -26,6 +26,7 @@ TODO: Add long description of the pod here.
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Bartjezzz' => 'bart@gamehouse.com' }
   s.source           = { :git => 'https://github.com/Bartjezzz/polljoy.git', :tag => s.version.to_s }
+
   # s.social_media_url = 'https://twitter.com/Bartjezzz'
 
   s.ios.deployment_target = '9.0'
